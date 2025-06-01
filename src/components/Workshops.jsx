@@ -8,7 +8,7 @@ import workshop5 from '../assets/workshop1.jpeg'
 
 export default function Workshops() {
   // Array of all workshop photo URLs
-  const photos = [workshop1, workshop2, workshop3, workshop4, workshop5]
+  const photos = [workshop4, workshop2, workshop3, workshop1, workshop5]
   // Track which photo is shown as the main image
   const [mainImage, setMainImage] = useState(photos[0])
 

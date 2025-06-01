@@ -34,7 +34,7 @@ export default function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Navigate replace to="/blog" />} />
+        <Route path="/" element={<Navigate replace to="/" />} />
 
         <Route
           path="/blog"
