@@ -1,14 +1,14 @@
 // src/components/Workshops.jsx
 import React, { useState } from 'react'
-import workshop1 from '../assets/WhatsApp Image 2025-06-01 at 23.53.51.jpeg'
+import workshop1 from '../assets/workshop3.jpeg'
 import workshop2 from '../assets/WhatsApp Image 2025-06-01 at 23.53.54 (1).jpeg'
 import workshop3 from '../assets/workshop2.jpeg'
-import workshop4 from '../assets/workshop3.jpeg'
+import workshop4 from '../assets/../assets/WhatsApp Image 2025-06-01 at 23.53.51.jpeg'
 import workshop5 from '../assets/workshop1.jpeg'
 
 export default function Workshops() {
   // Array of all workshop photo URLs
-  const photos = [workshop4, workshop2, workshop3, workshop1, workshop5]
+  const photos = [workshop1, workshop2, workshop3, workshop4, workshop5]
   // Track which photo is shown as the main image
   const [mainImage, setMainImage] = useState(photos[0])
 
