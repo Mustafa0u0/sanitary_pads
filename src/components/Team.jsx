@@ -4,12 +4,12 @@ import member1 from '../assets/team_member1.jpeg'
 import member2 from '../assets/simaat madnie .jpg'
 import member3 from '../assets/Sultan.jpg'
 import member4 from '../assets/Basma Almaza PIC.png'
-import member5 from '../assets/Sultan.jpg'
+import member5 from '../assets/WhatsApp Image 2025-06-02 at 02.45.46.jpeg'
 
 const team = [
   { img: member1, name: 'Bashir Mahad Abshir Abdi' },
   { img: member2, name: 'Simaat Madnie' },
-  { img: member3, name: 'Sultan Ali Alshardofi Ahmed' },
+  { img: member3, name: 'Sultan Ali Alshardofi' },
   { img: member4, name: 'Basma Almaza' },
   { img: member5, name: 'Osama Mohamed Abuagla' },
 ]
