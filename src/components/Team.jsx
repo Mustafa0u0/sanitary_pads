@@ -59,7 +59,7 @@ export default function Team() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-32 h-32 rounded-full object-cover"
+                className="w-32 h-40 rounded-full object-cover"
               />
               <p className="mt-4 text-lg font-semibold text-gray-900">
                 {member.name}
