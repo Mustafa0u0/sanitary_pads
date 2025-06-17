@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import workshop1 from '../assets/workshop3.jpeg'
 import workshop2 from '../assets/WhatsApp Image 2025-06-01 at 23.53.54 (1).jpeg'
 import workshop3 from '../assets/workshop2.jpeg'
-import workshop4 from '../assets/../assets/WhatsApp Image 2025-06-01 at 23.53.51.jpeg'
+import workshop4 from '../assets/WhatsApp Image 2025-06-01 at 23.53.51.jpeg'
 import workshop5 from '../assets/workshop1.jpeg'
 
 export default function Workshops() {
@@ -16,7 +16,7 @@ export default function Workshops() {
     <section id="workshops" className="bg-white py-24">
       <div className="container mx-auto px-4">
         <h3 className="text-5xl font-extrabold text-center text-brand-dark mb-12">
-          Pad Making Essentials
+          Awareness Workshops
         </h3>
 
         {/* ─── Main Workshop Card ───────────────────────────────────────────────── */}
@@ -25,7 +25,7 @@ export default function Workshops() {
             {/* Main Workshop Image */}
             <img
               src={mainImage}
-              alt="Pad Making Essentials"
+              alt="Awareness Workshop"
               className="w-full h-[450px] object-cover"
             />
             {/* Overlay Gradient */}
@@ -37,13 +37,14 @@ export default function Workshops() {
               Workshop Overview
             </h4>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Learn step-by-step how to craft reusable, eco-friendly menstrual pads from scratch. 
-              In this hands-on session, you will discover:
+              Join our community awareness workshops focused on menstrual health,
+              eco-friendly period care, and environmental impact. Highlights include:
             </p>
             <ul className="list-disc list-inside mt-4 space-y-2 text-gray-600">
-              <li>Material selection and preparation</li>
-              <li>Cutting, layering, and stitching techniques</li>
-              <li>Cleaning, maintenance, and composting tips</li>
+              <li>Understanding menstrual hygiene and sustainable solutions</li>
+              <li>Benefits of reusable and biodegradable products</li>
+              <li>Practical tips for care, cleaning, and composting</li>
+              <li>Open Q&A and community discussion</li>
             </ul>
           </div>
         </div>

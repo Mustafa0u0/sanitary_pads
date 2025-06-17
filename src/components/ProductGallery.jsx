@@ -6,7 +6,7 @@ import product2 from '../assets/WhatsApp Image 2025-06-01 at 23.53.59.jpeg'
 import product3 from '../assets/WhatsApp Image 2025-06-01 at 23.54.00.jpeg'
 
 export default function ProductsPage() {
-  // Only one product (Medium, RM 8), but show multiple angles in a small carousel
+  // Carousel images for the single "3-pack" product
   const productImages = [product1, product2, product3]
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -18,8 +18,9 @@ export default function ProductsPage() {
     return () => clearInterval(interval)
   }, [productImages.length])
 
-  const size = 'Medium'
-  const price = 8
+  // Unit pricing: 1 unit = 3 pads for RM 24
+  const packPrice = 24
+  const packLabel = '3-Pack Unit'
 
   return (
     <section id="product" className="bg-indigo-50 py-24">
@@ -28,7 +29,7 @@ export default function ProductsPage() {
           Our Product
         </h3>
 
-        {/* ─── Small Carousel ──────────────────────────────────────────────────────── */}
+        {/* Carousel for product angles */}
         <div className="relative mx-auto max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden">
           <img
             src={productImages[currentIndex]}
@@ -37,9 +38,9 @@ export default function ProductsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 p-6">
-            <h4 className="text-2xl font-bold text-white">Biodegradable Pad</h4>
+            <h4 className="text-2xl font-bold text-white">Biodegradable Pad Set</h4>
             <p className="text-lg text-gray-200 leading-relaxed">
-              100% chemical-free, compostable pad crafted from organic materials.
+              Each unit includes 3 reusable, compostable pads crafted from organic materials.
             </p>
           </div>
           <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-3">
@@ -58,14 +59,14 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* ─── Single Product Info & Purchase Form ───────────────────────────────── */}
+        {/* Purchase Form */}
         <div className="mx-auto max-w-lg bg-white rounded-2xl shadow-lg p-8">
-          <h4 className="text-3xl font-bold text-gray-900 mb-4">Biodegradable Pad</h4>
+          <h4 className="text-3xl font-bold text-gray-900 mb-4">{packLabel}</h4>
           <p className="text-gray-700 mb-4">
-            Our eco-friendly pad is reusable, compostable, and chemical-free. Designed for maximum comfort and absorbency without any plastic layers. Good for you and the planet.
+            Enjoy the comfort and sustainability of our biodegradable pads in a convenient 3-pack unit. Ideal for regular use with zero plastic.
           </p>
           <p className="text-lg font-semibold text-brand-dark mb-6">
-            Size: {size} &nbsp;|&nbsp; Price: RM {price}
+            Price: RM {packPrice}
           </p>
 
           <form
@@ -73,10 +74,10 @@ export default function ProductsPage() {
             method="POST"
             className="space-y-6"
           >
-            {/* Pass product details in hidden inputs */}
-            <input type="hidden" name="product_name" value="Biodegradable Pad" />
-            <input type="hidden" name="size" value={size} />
-            <input type="hidden" name="price" value={`${price}`} />
+            {/* Hidden inputs for order details */}
+            <input type="hidden" name="product_name" value="3-Pack Biodegradable Pads" />
+            <input type="hidden" name="unit_label" value={packLabel} />
+            <input type="hidden" name="unit_price" value={`${packPrice}`} />
 
             <div>
               <label className="block text-gray-700 font-medium mb-2">Name</label>
@@ -112,14 +113,14 @@ export default function ProductsPage() {
             </div>
 
             <div className="text-right">
-              <span className="text-xl font-bold text-gray-800">Total: RM {price}</span>
+              <span className="text-xl font-bold text-gray-800">Total: RM {packPrice}</span>
             </div>
 
             <button
               type="submit"
               className="w-full bg-brand-green text-white font-semibold py-3 rounded-full shadow hover:bg-brand-dark transition-colors"
             >
-              Pay RM {price}
+              Pay RM {packPrice}
             </button>
           </form>
         </div>

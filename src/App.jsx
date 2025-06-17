@@ -14,7 +14,9 @@ import BlogPost from './components/BlogPost'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import SplashScreen from './components/SplashScreen'
+import CommentsSection from './components/CommentsSection'
 
+import StatsSection from './components/StatsSection'
 export default function App() {
   const [showSplash, setShowSplash] = useState(true)
 
@@ -42,8 +44,10 @@ export default function App() {
             <>
               <Hero />
               <VisionMission />
+              <StatsSection />
               <Workshops />
               <ProductGallery />
+              <CommentsSection />
               <Team />
               <GetInvolved />
               <Blog />
